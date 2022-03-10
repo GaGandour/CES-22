@@ -10,7 +10,9 @@ def draw_square(t: turtle.Turtle, sz):
     for _ in range(4):
         t.forward(sz)
         t.left(90)
+    t.penup()
     t.goto(t.position() - (10,10))
+    t.pendown()
 
 
 for i in range(5):
