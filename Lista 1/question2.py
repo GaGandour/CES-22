@@ -3,7 +3,8 @@ import turtle
 wn = turtle.Screen()
 wn.bgcolor("lightgreen")
 my_turtle = turtle.Turtle()
-my_turtle.color("red")
+my_turtle.color("magenta")
+my_turtle.pensize(3)
 
 
 def draw_poly(t: turtle.Turtle, n , sz):
