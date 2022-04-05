@@ -25,7 +25,7 @@ class Materia(abc.ABC):
         
 
 class CES22(Materia):
-    nome = "Programação Orientada a Objetos"
+    nome = "Programacao Orientada a Objetos"
     sigla = "CES22"
     carga_horaria = "4 creditos"
 
@@ -45,7 +45,7 @@ class CES12(Materia):
         super().__init__(professor, turma)
 
     def descricao(self):
-        print("Em {}, voce vai aprender a implementar ervores rubro-negras com o professor {}!\n".format(self.sigla, self.professor))
+        print("Em {}, voce vai aprender a implementar arvores rubro-negras com o professor {}!\n".format(self.sigla, self.professor))
 
 
 class CES10(Materia):
@@ -65,10 +65,17 @@ ces22 = CES22("Yano", "24")
 
 CES12.apresenta()
 CES12.caracteristicas()
+print("---------------------------------")
+CES22.apresenta()
+CES22.caracteristicas()
+
+print("---------------------------------")
 ces12.descricao()
+print("---------------------------------")
 ces22.descricao()
 ces22.muda_professor("Karla")
 ces22.descricao()
+print("---------------------------------")
 
 """Aqui, esperamos um erro porque não implementamos a função descrição."""
 ces10 = CES10("Armando", "24")
