@@ -26,6 +26,7 @@ minha_lista = [
 meu_dicionario = {
     "Melhor linguagem" : "Python",
     "Melhor curso": "Engenharia de Computação",
-    "Melhor turma": "T-24"}
+    "Melhor turma": "T-24"
+    }
 
 listar_palavras(minha_lista, meu_dicionario)

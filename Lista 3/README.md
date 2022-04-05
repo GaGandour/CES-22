@@ -29,3 +29,30 @@ No final do código, cada uma dessas funções são chamadas. Perceba que há um
 
         ces10 = CES10("Armando", "24")
     TypeError: Can't instantiate abstract class CES10 with abstract method descricao
+
+
+## Segunda questão (arquivo `question2.py`)
+
+Na segunda questão, foi implementado o `meu_decorador`, que imprime um aviso antes e depois de executar a função envolvida. No programa, a função `listar_palavras` lista todas as palavras de uma lista e de um dicionário. Assim, o output esperado é:
+
+    A funcao listar_palavras foi chamada:
+
+    hello
+    world
+    python
+    is
+    awesome
+
+    Melhor linguagem :  Python
+    Melhor curso :  Engenharia de Computa��o
+    Melhor turma :  T-24
+
+    A funcao listar_palavras foi finalizada
+
+## Terceira questão (arquivo `question3.py`)
+
+Finalmente, na terceira questão foram implementadas duas funções `Mamifero`, e `Estimacao`. A classe `Cachorro` herda ambas as classes `Mamifero` e `Estimacao`. Na primeira e na segunda classes, há uma impressão na inicialização, cujo texto depende da classe inicializada. Ao invocar `super().__init__()` na inicialização da classe `Cachorro`, apenas a impressão da classe mamífero é invocada, como se pode ver pelo _output_ dado:
+
+    O mamifero Rex foi criado
+
+Isso confirma que a função `super()` se refere apenas à primeira superclasse de `Cachorro`.

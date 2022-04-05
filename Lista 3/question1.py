@@ -77,5 +77,5 @@ ces22.muda_professor("Karla")
 ces22.descricao()
 print("---------------------------------")
 
-"""Aqui, esperamos um erro porque não implementamos a função descrição."""
+"""Aqui, esperamos um erro porque não implementamos a função descricao."""
 ces10 = CES10("Armando", "24")
