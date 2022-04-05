@@ -25,7 +25,7 @@ minha_lista = [
 
 meu_dicionario = {
     "Melhor linguagem" : "Python",
-    "Melhor curso": "Engenharia de Computação",
+    "Melhor curso": "Engenharia de Computacao",
     "Melhor turma": "T-24"
     }
 

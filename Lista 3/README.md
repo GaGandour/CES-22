@@ -44,7 +44,7 @@ Na segunda questão, foi implementado o `meu_decorador`, que imprime um aviso an
     awesome
 
     Melhor linguagem :  Python
-    Melhor curso :  Engenharia de Computa��o
+    Melhor curso :  Engenharia de Computacao
     Melhor turma :  T-24
 
     A funcao listar_palavras foi finalizada
