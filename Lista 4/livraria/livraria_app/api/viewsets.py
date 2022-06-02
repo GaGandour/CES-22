@@ -7,6 +7,9 @@ from rest_framework.response import Response
 
 
 class ClientViewSet(ModelViewSet):
+    """
+    Essa classe maneja os http requests referente à criação, deleção, requisição e modificação de clientes
+    """
     serializer_class = serializers.ClienteSerializer
     queryset = Cliente.objects.all()
 
@@ -44,9 +47,6 @@ class ClientViewSet(ModelViewSet):
 
 
     def delete_single_client(self, request, pk=None):
-        """
-        deleta um cliente
-        """
         cliente = Cliente.objects.filter(pk=pk)
         if cliente:
             cliente.delete()
@@ -58,6 +58,9 @@ class ClientViewSet(ModelViewSet):
 
 
 class AuthorViewSet(ModelViewSet):
+    """
+    Essa classe maneja os http requests referente à criação, deleção, requisição e modificação de autores
+    """
     serializer_class = serializers.AutorSerializer
     queryset = Autor.objects.all()
 
@@ -94,9 +97,6 @@ class AuthorViewSet(ModelViewSet):
         return Response(autor.to_json())
 
     def delete_single_author(self, request, pk=None):
-        """
-        deleta um autor
-        """
         autores = Autor.objects.filter(pk=pk)
         if autores:
             autor = autores[0]
@@ -109,6 +109,9 @@ class AuthorViewSet(ModelViewSet):
 
 
 class BookViewSet(ModelViewSet):
+    """
+    Essa classe maneja os http requests referente à criação, deleção, requisição e modificação de livros
+    """
     serializer_class = serializers.LivroSerializer
     queryset = Livro.objects.all()
 
@@ -171,9 +174,6 @@ class BookViewSet(ModelViewSet):
 
 
     def delete_single_book(self, request, pk=None):
-        """
-        deleta um livro
-        """
         livros = Livro.objects.filter(pk=pk)
         if livros:
             livro = livros[0]
@@ -186,6 +186,9 @@ class BookViewSet(ModelViewSet):
 
 
 class PurchaseViewSet(ModelViewSet):
+    """
+    Essa classe maneja os http requests referente à criação, deleção, requisição e modificação de compras
+    """
     serializer_class = serializers.CompraSerializer
     queryset = Compra.objects.all()
 
@@ -220,26 +223,23 @@ class PurchaseViewSet(ModelViewSet):
             return Response(status=404)
         
         compra = compras[0]
-        client_id = request.data.get('cliente_id')
-        itens = request.data.get('itens')
+        client_id = request.data.get('cliente')
+        items = request.data.get('items')
         if client_id:
             clientes = Cliente.objects.filter(pk=client_id)
             if clientes:
                 compra.cliente = clientes[0]
-        if itens:
+        if items:
             current_items = Item.objects.all()
             for item in current_items:
                 item.delete()
-            for item in itens:
+            for item in items:
                 elem = Item.from_json(item, compra.id)
                 elem.save()
         compra.save()
         return Response(compra.to_json())
 
     def delete_single_purchase(self, request, pk=None):
-        """
-        deleta um compra
-        """
         compras = Compra.objects.filter(pk=pk)
         if compras:
             compra = compras[0]

@@ -23,6 +23,7 @@ route = routers.DefaultRouter()
 route.register(r'cliente', viewsets.ClientViewSet, basename='cliente')
 route.register(r'autor', viewsets.AuthorViewSet, basename='autor')
 route.register(r'livro', viewsets.BookViewSet, basename='livro')
+route.register(r'compra', viewsets.PurchaseViewSet, basename='compra')
 
 
 urlpatterns = [
