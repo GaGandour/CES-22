@@ -10,6 +10,9 @@ class Veiculo:
 
 
 class TipoDeVeiculo:
+    """
+    Caminhão, Automóvel, Moto, Caminhão de Carga, etc.
+    """
     def __init__(self, tipo, motorizacao):
         self.tipo = tipo
         self.motorizacao = motorizacao
@@ -19,6 +22,9 @@ class TipoDeVeiculo:
 
 
 class Motorizacao:
+    """
+    Elétrico, combustão, híbrido.
+    """
     def __init__(self, tipo):
         self.tipo = tipo
 
@@ -30,12 +36,18 @@ class VeiculoFactory:
 
 
 class CaminhaoFactory(VeiculoFactory):
+    """
+    Contrói Caminhões
+    """
     def criar_veiculo(self, motorizacao):
         tipo = TipoDeVeiculo("Caminhao", Motorizacao(motorizacao))
         return Veiculo(tipo)
 
 
 class AutomovelFactory(VeiculoFactory):
+    """
+    Contrói Automóveis
+    """
     def criar_veiculo(self, motorizacao):
         tipo = TipoDeVeiculo("Automovel", Motorizacao(motorizacao))
         return Veiculo(tipo)

@@ -1,4 +1,7 @@
 class PizzaComponent:
+    """
+    Cada ingrediente da pizza tem um custo diferente
+    """
     def getDescription(self):
         return self.__class__.__name__
 
@@ -11,6 +14,9 @@ class Prato(PizzaComponent):
 
 
 class Decorator(PizzaComponent):
+    """
+    Decorador utilizado para construir a pizza.
+    """
     def __init__(self, pizza_component):
         self.component = pizza_component
 
