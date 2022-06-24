@@ -16,4 +16,6 @@ class Filho(Pai):
 
 filho = Filho()
 
-filho.imprimir()
+a = "2,,,1"
+a = a.replace(",",".")
+print(a)
