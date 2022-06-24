@@ -18,8 +18,8 @@ def makeform(root, fields):
         entries[field] = ent
     return entries
 
-participantes = [Participante("aaaa", "aaaaaa","aaaa", "aaaaaa","aaaa", "aaaaaa"),Participante("aaaa", "aaaaaa","aaaa", "aaaaaa","aaaa", "aaaaaa")]
 
+participantes = []
 
 
 def createParticipante(entries):
